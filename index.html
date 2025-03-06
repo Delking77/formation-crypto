@@ -1,90 +1,200 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation Crypto Legatio</title>
-    <meta name="description" content="Maîtrisez les cryptomonnaies avec la Formation Crypto Legatio : 4 semaines pour apprendre à acheter, stocker et gérer vos cryptos, avec un bonus fiscalité !">
-    <meta name="keywords" content="cryptomonnaies, crypto, formation crypto, bitcoin, ethereum, fiscalité crypto">
-    <meta name="author" content="Delking77">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <header class="header" role="banner">
-        <h1>Formation Crypto Legatio</h1>
-        <p>Devenez expert en cryptomonnaies en 4 semaines – Bonus fiscalité inclus !</p>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
 
-    <div class="container" role="main">
-        <div class="section">
-            <h2>Pourquoi choisir cette formation ?</h2>
-            <ul>
-                <li>Apprenez les bases des cryptomonnaies et leurs avantages.</li>
-                <li>Sécurisez vos investissements avec des techniques pratiques.</li>
-                <li>Choisissez les meilleures plateformes et cryptos.</li>
-                <li>Maîtrisez la fiscalité pour rester dans la légalité.</li>
-            </ul>
-        </div>
+body {
+    background-color: #F5F6FA;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('wood-background.jpg'); /* Simule le thème Timesheet */
+    background-size: cover;
+    background-position: center;
+}
 
-        <div class="section">
-            <h2>Votre parcours en 4 semaines</h2>
-            <p>Inscrivez-vous pour découvrir un programme structuré :</p>
-            <ul>
-                <li><strong>Semaine 1 :</strong> Introduction aux cryptos et sécurité.</li>
-                <li><strong>Semaine 2 :</strong> Comparaison des cryptos et plateformes.</li>
-                <li><strong>Semaine 3 :</strong> Création et sécurisation de votre portefeuille.</li>
-                <li><strong>Semaine 4 :</strong> Achat malin et gestion des risques.</li>
-                <li><strong>Bonus :</strong> Guide sur la fiscalité des cryptos.</li>
-            </ul>
-        </div>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent pour lisibilité */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        <div class="section testimonials">
-            <h2>Ce qu’ils en disent</h2>
-            <blockquote>
-                <p>"Formation claire et actionable ! J’ai sécurisé mes fonds rapidement." – Marie D.</p>
-            </blockquote>
-            <blockquote>
-                <p>"Le bonus fiscalité m’a sauvé lors de ma déclaration !" – Paul R.</p>
-            </blockquote>
-        </div>
+.header {
+    background: linear-gradient(135deg, #1E90FF, #32CD32);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
 
-        <div class="cta">
-            <div class="paypal-qr">
-                <img src="qrcode.png" alt="QR code pour accéder à la formation Crypto Legatio" style="max-width: 200px; margin: 20px auto; display: block;" />
-                <p>Scannez ce QR code ou cliquez ci-dessous pour vous inscrire (99 €). Accès sous 24h après paiement.</p>
-            </div>
-            <a href="https://forms.zohopublic.eu/legatiofinancegm1/form/FormationLegatio/formperma/KJFWjeRIKY8UThsXsHJidxiNMAWzhDUYPAJeReZCVbY" class="cta-button">Inscrivez-vous maintenant pour 99 € !</a>
-            <div id="countdown" style="text-align: center; margin: 20px 0; font-size: 18px; color: #d32f2f;">
-                Offre valable encore <span id="timer"></span> !
-            </div>
-        </div>
-    </div>
+.header h1, .header p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
 
-    <footer role="contentinfo">
-        <p>© 2025 Legatio - Formez-vous aux cryptos en toute confiance !</p>
-    </footer>
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
 
-    <script>
-        // Compte à rebours pour l’offre spéciale (jusqu’au 30 mars 2025)
-        const endDate = new Date("2025-03-30T23:59:59").getTime();
-        const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = endDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById('countdown').innerHTML = "Offre expirée !";
-            }
-        }, 1000);
-    </script>
-</body>
-</html>
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.section {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.section h2 {
+    color: #1E90FF;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section ul li {
+    position: relative;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.section ul li:before {
+    content: "★";
+    color: #E65100;
+    position: absolute;
+    left: -20px;
+}
+
+.section ul li strong {
+    color: #32CD32;
+}
+
+.testimonials {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.testimonials h2 {
+    color: #1E90FF;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #666;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid #32CD32;
+}
+
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.3em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
+    line-height: 1.25rem;
+}
+
+.cta-button:hover {
+    background-color: #e07b00;
+    transform: scale(1.05);
+}
+
+.cta-button:focus {
+    outline: 2px solid #1E90FF;
+    outline-offset: 2px;
+}
+
+/* Styles pour .paypal-qr laissés en commentaire car QR code supprimé */
+/*
+.paypal-qr {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 10px auto;
+    max-width: 300px;
+    border: 2px solid #1E90FF;
+    animation: pulse 2s infinite;
+}
+
+.paypal-qr p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1E90FF;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .section h2 {
+        font-size: 1.5em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 20px;
+    }
+    .section {
+        padding: 20px;
+    }
+}
