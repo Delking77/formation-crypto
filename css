@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5F6FA;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #1E90FF, #32CD32);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.header h1, .header p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.section {
+    margin: 40px 0;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    color: #1E90FF;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section ul li {
+    position: relative;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.section ul li:before {
+    content: "★";
+    color: #E65100;
+    position: absolute;
+    left: -20px;
+}
+
+.section ul li strong {
+    color: #32CD32;
+}
+
+.testimonials {
+    margin: 40px 0;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonials h2 {
+    color: #1E90FF;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #666;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid #32CD32;
+}
+
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.3em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
+    line-height: 1.25rem;
+}
+
+.cta-button:hover {
+    background-color: #e07b00;
+    transform: scale(1.05);
+}
+
+.cta-button:focus {
+    outline: 2px solid #1E90FF;
+    outline-offset: 2px;
+}
+
+.paypal-qr {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 10px auto;
+    max-width: 300px;
+    border: 2px solid #1E90FF;
+    animation: pulse 2s infinite;
+}
+
+.paypal-qr p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1E90FF;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .section h2 {
+        font-size: 1.5em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 30px;
+    }
+    .paypal-qr {
+        max-width: 250px;
+        padding: 15px;
+    }
+    .paypal-qr img {
+        max-width: 150px;
+    }
+    .paypal-qr p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-card {
+        min-height: 250px;
+        padding: 15px;
+    }
+    .week-card h3 {
+        font-size: 1.2em;
+    }
+    .week-card p, .week-card ul li {
+        font-size: 0.9em;
+    }
+    .header {
+        padding: 40px 20px;
+    }
+}
